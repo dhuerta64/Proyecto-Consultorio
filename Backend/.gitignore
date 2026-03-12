@@ -1,0 +1,13 @@
+# dependencias
+node_modules/
+
+# variables de entorno
+.env
+.env.local
+
+# next
+.next/
+
+# builds
+dist/
+build/
