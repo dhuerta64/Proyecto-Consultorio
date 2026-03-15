@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Landing from '../Pages/Landing/landing'
+import Contactos from "../Pages/Landing/contactos";
 import Login from '../Pages/Login/login'
 
 import AcercaNosotros from "../Pages/Landing/acerca_nosotros"
@@ -47,6 +48,7 @@ return(
  <Route path="/" element={<Landing></Landing>}></Route>
 
 <Route path="/about" element={<AcercaNosotros></AcercaNosotros>}></Route>
+<Route path="/contactos" element={<Contactos></Contactos>}></Route>
 
 </Route>
 

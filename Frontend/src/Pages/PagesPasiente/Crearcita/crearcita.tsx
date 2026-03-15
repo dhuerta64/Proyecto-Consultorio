@@ -18,6 +18,7 @@ const methods = useForm<PasienteSchemasType>({
     return(
    <FormProvider {... methods} >
     <form>
+      <h2>Agendar nueva cita</h2>
       <FormController 
            name= 'Motivo'
            labelText='motivo de la cita'

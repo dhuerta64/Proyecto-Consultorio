@@ -22,11 +22,15 @@
   
 }
 
-/* IZQUIERDA: LOGO + TÍTULO */
-.header__left {
+.header__left{
   display: flex;
   align-items: center;
-  gap: 12px;
+  text-decoration: none; /* quita el subrayado */
+  color: inherit; /* mantiene el color normal */
+}
+
+.header__left:hover{
+  text-decoration: none; /* evita que aparezca al pasar el mouse */
 }
 
 .header__logo {

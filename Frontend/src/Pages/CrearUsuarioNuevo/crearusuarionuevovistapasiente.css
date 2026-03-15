@@ -1,67 +1,69 @@
-/* Fondo de la pantalla */
-.modal-container{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #f4f6f9;
-    padding: 20px;
+.modal-container {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Tarjeta del formulario */
-.modal-card{
-    background: white;
-    padding: 30px 35px;
-    border-radius: 12px;
-    width: 100%;
-    max-width: 800px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+.modal-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  animation: slideDown 0.3s ease;
+  overflow: visible; /* importante: no cortar dropdowns */
+  z-index: 900; 
 }
 
-.form-title{
-    color: black;
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    text-align: center;
+.modal-card h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #2c3e50;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.5rem;
 }
 
-/* Grid del formulario */
-.form-grid{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem 1.5rem;
 }
 
-/* Hace que algunos elementos ocupen toda la fila */
-.form-grid .rs-picker,
-.form-grid input{
-    width: 100%;
+
+.submit-btn {
+  grid-column: span 2;
+  background: #007bff;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.9rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 1rem;
 }
 
-/* Inputs */
-input{
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #dcdcdc;
-    font-size: 14px;
-    transition: border 0.2s ease;
+.submit-btn:hover {
+  background: #0056b3;
+}
+.rs-picker-popup {
+  z-index: 2000 !important;
 }
 
-input:focus{
-    outline: none;
-    border-color: #3498ff;
-}
-
-/* Botón */
-.submit-btn{
-    grid-column: span 2;
-    margin-top: 10px;
-    padding: 12px;
-    border-radius: 8px;
-}
-
-.submit-btn.rs-btn:active{
-    background: #0a9e6d;
-    border-color: #0a9e6d;
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
